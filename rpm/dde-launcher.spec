@@ -45,11 +45,11 @@ Requires:       hicolor-icon-theme
 %{summary}.
 
 %package devel
-Summary:        Development package for %{sname}
+Summary:        Development package for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 
 %description devel
-Header files and libraries for %{sname}.
+Header files and libraries for %{name}.
 
 %prep
 %autosetup -p1 -n %{repo}-%{version}
@@ -74,6 +74,8 @@ sed -i 's|lrelease|lrelease-qt5|' translate_generation.sh
 %files
 %license LICENSE
 %{_bindir}/%{repo}
+%{_bindir}/%{repo}-wrapper
+%{_datadir}/applications/%{repo}.desktop
 %{_datadir}/%{repo}/
 %{_datadir}/dbus-1/services/*.service
 %{_datadir}/icons/hicolor/scalable/apps/%{sname}.svg

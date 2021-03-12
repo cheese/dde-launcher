@@ -8,6 +8,7 @@ synced_files:
     - rpm/deepin-launcher.spec
     - .packit.yaml
 
+upstream_ref: 5.3.0.45
 upstream_package_name: dde-launcher
 # downstream (Fedora) RPM package name
 downstream_package_name: deepin-launcher

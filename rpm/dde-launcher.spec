@@ -41,6 +41,7 @@ Requires:       dde-daemon
 %endif
 Requires:       startdde
 Requires:       hicolor-icon-theme
+Requires:       %{_bindir}/qdbus-qt5
 
 %description
 %{summary}.
@@ -54,6 +55,7 @@ Header files and libraries for %{name}.
 
 %prep
 %autosetup -p1 -n %{repo}-%{version}
+sed -i 's/qdbus /qdbus-qt5 /' %{repo}-wrapper
 
 %build
 sed -i 's|lrelease|lrelease-qt5|' translate_generation.sh

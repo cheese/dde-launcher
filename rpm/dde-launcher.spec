@@ -31,6 +31,7 @@ BuildRequires:  pkgconfig(Qt5Svg)
 BuildRequires:  pkgconfig(Qt5X11Extras)
 BuildRequires:  gtest-devel
 BuildRequires:  qt5-qtbase-private-devel
+BuildRequires:  make
 %{?_qt5:Requires: %{_qt5}%{?_isa} = %{_qt5_version}}
 Requires:       deepin-menu
 %if 0%{?fedora}
